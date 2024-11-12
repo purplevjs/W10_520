@@ -1,45 +1,41 @@
-# Team Assignment #1
-## Data Sourcing
+# Loan Approval Prediction App
 
-## Instructions
-1. Create a feature branch in the class GitHub repository for your team. 
+This is a simple Streamlit application that predicts loan approval based on user input. The app uses a decision tree classifier trained on a synthetic dataset for demonstration purposes.
 
-2. Put together a code demo for your assigned topic. 
-Code should be:
-* Clean and well organized script
-* Using best practices (if you aren’t sure, go back to the Premodule content)
-* Well-commented
-* Contains appropriate unit testing
-* Clear name (ie ‘web-scraping-selenium.py’)
+## Prerequisites
 
-3. Create a <5 minute video documenting your topic and code demo. 
+- Docker Desktop
+- Git
 
-## Submission
-To submit your code, make a PR into the data-sourcing-ta1 branch and add me and the TA as reviewers. In your PR, add the link to your demo video. Also, add any requirements (and versions) that are not currently in the requirements.txt file to the text of your PR.
+## Getting Started
 
-## Topics
-* Web scraping with Selenium
-* Web scraping with Beautiful Soup
-* Web scraping using requests
-* Using Hugging Face API for getting datasets
-* Use an API from a social platform (i.e. Strava, Twitter)
-* Use the PubMed API
-* [maybe] Collect sensor data from a Raspberry Pi (temperature sensor may be the easiest, but you can use any sensor)
+Follow these steps to run the Loan Approval Prediction App on your local machine:
 
-## Rubric
-### Code (30 points)
-* Code is a script, not a notebook
-* Code is clean and well organized
-* Code is documented with docstrings and comments 
-* Code is free of commented out code (ie debug print statements)
-* Script has a clear name
-* Branching and PRs were done appropriately
-* Requirements are included in the text of the PR and are correct and versioned
-* The code runs as documented
+1. Clone the repository: git clone https://github.com/yourusername/loan-approval-prediction.git
+cd loan-approval-prediction
 
-### Video (15 points)
-* < 5 minutes
-* The video is of mid-high production quality and doesn’t contain significant background noise 
-* Video is well organized and clear
-* Video documents topic and code effectively
+2. Build the Docker image: docker build -t demo-app .
 
+3. Run the Docker container: docker run -p 5000:5000 demo-app
+
+4. Open your web browser and go to: http://0.0.0.0:5000
+
+
+## Using the App
+
+1. Select your gender from the dropdown menu.
+2. Choose your marital status.
+3. Select your education level.
+4. Enter your applicant income.
+5. Click the "Predict" button to see the loan approval prediction.
+
+## Project Structure
+
+- `model.py`: Contains the Streamlit app code and the machine learning model.
+- `requirements.txt`: Lists all Python dependencies.
+- `Dockerfile`: Defines the Docker image for the app.
+- `loan_prediction.csv`: The dataset used for training the model (not used in this demo version).
+
+## Disclaimer
+
+This app uses a simplified model for demonstration purposes only. It should not be used for actual loan decisions.
